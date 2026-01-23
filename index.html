@@ -1224,23 +1224,20 @@
             mobileMagicIndicator.style.transform = `translateX(${index * 70}px)`;
           }
 
-          // Update active classes
+          // Update active classes for BOTH navbars
           document
-            .querySelectorAll(
-              ".navigation-sidebar .list, .mobile-magic-nav .list",
-            )
-            .forEach((item) => item.classList.remove("active"));
+            .querySelectorAll(".navigation-sidebar .list")
+            .forEach((item, i) => item.classList.toggle("active", i === index));
           document
-            .querySelectorAll(
-              ".navigation-sidebar .list, .mobile-magic-nav .list",
-            )
-            [index]?.classList.add("active");
+            .querySelectorAll(".mobile-magic-nav .list")
+            .forEach((item, i) => item.classList.toggle("active", i === index));
+
+          // Update labels
           document
             .querySelectorAll(".nav-labels .nav-label")
-            .forEach((label) => label.classList.remove("active"));
-          document
-            .querySelectorAll(".nav-labels .nav-label")
-            [index]?.classList.add("active");
+            .forEach((label, i) =>
+              label.classList.toggle("active", i === index),
+            );
         }
 
         // Event delegation for nav labels
