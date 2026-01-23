@@ -1,11 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kennedy Saidimu - Software Engineer</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+
+    <!-- Critical CSS should be inlined here for faster initial render -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Preload critical images only -->
     <link rel="preload" href="images/badge.png" as="image" />
-    <link rel="stylesheet" href="style.css" as="style" />
+    <link rel="preload" href="images/saidimu-logo-white.png" as="image" />
   </head>
   <body>
     <main>
@@ -13,28 +21,28 @@
       <aside>
         <div class="nav-content">
           <div class="logo">
-            <img src="images/saidimu-logo-white.png" alt="Saidimu Logo" width="24" height="24" loading="lazy" decoding="async">
+            <img
+              src="images/saidimu-logo-white.png"
+              alt="Saidimu Logo"
+              width="24"
+              height="24"
+              loading="eager"
+              decoding="async"
+            />
           </div>
           <div class="horizontal-line"></div>
           <div class="sidebar-nav-wrapper">
             <div class="nav-labels">
-              <span class="nav-label active" onclick="moveMagicIndicator(0)"
-                >Projects</span
-              >
-              <span class="nav-label" onclick="moveMagicIndicator(1)"
-                >Skills</span
-              >
-              <span class="nav-label" onclick="moveMagicIndicator(2)"
-                >About Me</span
-              >
-              <span class="nav-label" onclick="moveMagicIndicator(3)"
-                >Contacts</span
-              >
+              <span class="nav-label active" data-index="0">Projects</span>
+              <span class="nav-label" data-index="1">Skills</span>
+              <span class="nav-label" data-index="2">About Me</span>
+              <span class="nav-label" data-index="3">Contacts</span>
             </div>
             <div class="navigation-sidebar">
               <ul id="magicNav">
                 <li class="list active" data-target="projects">
-                  <a href="#projects" ><svg
+                  <a href="#projects"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -45,7 +53,8 @@
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
-                      /></svg></a>
+                      /></svg
+                  ></a>
                 </li>
                 <li class="list" data-target="skills">
                   <a href="#skills"
@@ -115,7 +124,10 @@
         <div class="vertical-rule"></div>
         <div class="sidebar-footer">
           <div class="social-pill">
-            <a href="https://linkedin.com/in/kennedy-waruiru-602835236" class="social-icon"
+            <a
+              href="https://linkedin.com/in/kennedy-waruiru-602835236"
+              class="social-icon"
+              rel="noopener"
               ><img
                 src="/images/linkedin.svg"
                 alt="Linkedin"
@@ -124,16 +136,22 @@
                 loading="lazy"
                 decoding="async"
             /></a>
-            <a href="https://linktr.ee/saidimuKennedy" class="social-icon"
+            <a
+              href="https://linktr.ee/saidimuKennedy"
+              class="social-icon"
+              rel="noopener"
               ><img
                 src="/images/linktree.svg"
-                alt="GitHub"
+                alt="Linktree"
                 width="24"
                 height="24"
                 loading="lazy"
                 decoding="async"
             /></a>
-            <a href="https://github.com/saidimu-kennedy" class="social-icon"
+            <a
+              href="https://github.com/saidimu-kennedy"
+              class="social-icon"
+              rel="noopener"
               ><img
                 src="/images/github.svg"
                 alt="GitHub"
@@ -152,18 +170,20 @@
         <div class="nav-pill mobile-magic-nav">
           <ul id="mobileMagicNav">
             <li class="list active" data-target="projects">
-              <a href="#projects"><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path
-                        d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
-                      /></svg></a>
+              <a href="#projects"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
+                  /></svg
+              ></a>
             </li>
             <li class="list" data-target="skills">
               <a href="#skills"
@@ -251,7 +271,10 @@
                       width="500"
                       height="390"
                       decoding="async"
-                      onerror="this.src='https://placehold.co/400x400?text=Badge'"
+                      loading="eager"
+                      onerror="
+                        this.src = 'https://placehold.co/400x400?text=Badge'
+                      "
                     />
                   </picture>
                 </div>
@@ -283,7 +306,6 @@
           </div>
 
           <div class="grid-content">
-
             <h1>Hi, you've found me...</h1>
 
             <!-- Card 1: Design -->
@@ -293,7 +315,9 @@
               </div>
               <h3>Figma, Wix Fusion</h3>
               <p>
-                I design, build, deploy, and maintain production software systems, taking responsibility for the full lifecycle from problem definition to long-term operation.
+                I design, build, deploy, and maintain production software
+                systems, taking responsibility for the full lifecycle from
+                problem definition to long-term operation.
               </p>
             </div>
 
@@ -304,7 +328,13 @@
               </div>
               <h3>Obsessed With Social Media Integrations</h3>
               <p>
-                I take a business-centered approach to software engineering: understanding how organizations operate, identifying inefficiencies in communication and workflows, and designing systems that automate processes, improve reliability, and support sustainable growth.My work spans SaaS platforms, internal business tools, and web systems, with a strong focus on backend architecture, integrations, and maintainable APIs.
+                I take a business-centered approach to software engineering:
+                understanding how organizations operate, identifying
+                inefficiencies in communication and workflows, and designing
+                systems that automate processes, improve reliability, and
+                support sustainable growth. My work spans SaaS platforms,
+                internal business tools, and web systems, with a strong focus on
+                backend architecture, integrations, and maintainable APIs.
               </p>
               <div class="social-icons-row">
                 <div class="social-bubble wa">
@@ -316,11 +346,8 @@
                 <div class="social-bubble ig">
                   <ion-icon name="logo-instagram"></ion-icon>
                 </div>
-                
               </div>
             </div>
-
-            
 
             <!-- Card 3: System Architecture -->
             <div class="about-card" id="card-architecture">
@@ -329,7 +356,9 @@
               </div>
               <h3 class="arch-title">System Thinking & Architecture</h3>
               <p class="arch-subtitle">
-                I design ecosystems, not just applications. My systems are composed of clearly defined services and data flows that can evolve without breaking core functionality.
+                I design ecosystems, not just applications. My systems are
+                composed of clearly defined services and data flows that can
+                evolve without breaking core functionality.
               </p>
 
               <div class="architecture-diagram-wrapper">
@@ -381,7 +410,9 @@
               </div>
 
               <div class="arch-description">
-                <strong>System Architecture & Design</strong> What I build is clearly defined; services and data flows that evolve without breaking core functionality.
+                <strong>System Architecture & Design</strong> What I build is
+                clearly defined; services and data flows that evolve without
+                breaking core functionality.
               </div>
 
               <div class="arch-footer">
@@ -412,7 +443,9 @@
                   height="80"
                   loading="lazy"
                   decoding="async"
-                  onerror="this.src='https://placehold.co/400x400?text=JChats'"
+                  onerror="
+                    this.src = 'https://placehold.co/400x400?text=JChats'
+                  "
                 />
               </div>
               <div class="jchats-title">
@@ -423,9 +456,9 @@
               <div class="jchats-red-card">
                 <h3>Context</h3>
                 <p>
-                  Businesses losing leads due to delayed responses,
-                  repetitive manual follow-ups, and lack of availability outside
-                  standard working hours.
+                  Businesses losing leads due to delayed responses, repetitive
+                  manual follow-ups, and lack of availability outside standard
+                  working hours.
                 </p>
                 <h3>Approach</h3>
                 <p>
@@ -436,7 +469,7 @@
               </div>
               <div class="jchats-display-screen">
                 <p>
-                  My Role, End-to-end ownership: system design, frontend and
+                  My Role: End-to-end ownership: system design, frontend and
                   backend development, testing, deployment, optimization, and
                   ongoing monitoring and SEO-driven growth.
                 </p>
@@ -456,9 +489,14 @@
               </div>
 
               <div class="section-intro-text">
-                <h3>Building Modular and Scalable </h3>
+                <h3>Building Modular and Scalable</h3>
                 <p>
-                  I focus on building software as integrated systems rather than isolated code. The process starts with understanding business workflows and identifying potential bottlenecks. I then design modular solutions with clear separation between frontend, backend, and data layers, ensuring the system remains clear, reliable, and easy to evolve over time.
+                  I focus on building software as integrated systems rather than
+                  isolated code. The process starts with understanding business
+                  workflows and identifying potential bottlenecks. I then design
+                  modular solutions with clear separation between frontend,
+                  backend, and data layers, ensuring the system remains clear,
+                  reliable, and easy to evolve over time.
                 </p>
               </div>
               <!-- Interactive Project Portfolio Card -->
@@ -520,8 +558,6 @@
               </div>
 
               <div class="competencies-visual-container">
-               
-
                 <div class="competencies-grid-new">
                   <!-- Pillar 1: Design -->
                   <div class="comp-capsule pillar-design">
@@ -539,23 +575,26 @@
                       />
                       <div class="tech-circle dark text-icon">
                         <img
-                        src="images/wix.svg"
-                        alt="Wix"
-                        width="40"
-                        height="40"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                          src="images/wix.svg"
+                          alt="Wix"
+                          width="40"
+                          height="40"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </div>
-                      
                     </div>
                   </div>
 
                   <!-- Floating Badge: SQL -->
                   <div class="floating-badge badge-sql">
                     <div class="tech-icon-small">
-                      <img src="images/mysql.svg" alt="SQL" />
-                      <img src="images/sqlite.svg" alt="SQLite" />
+                      <img src="images/mysql.svg" alt="SQL" loading="lazy" />
+                      <img
+                        src="images/sqlite.svg"
+                        alt="SQLite"
+                        loading="lazy"
+                      />
                     </div>
                   </div>
 
@@ -566,26 +605,40 @@
                       Systems
                     </div>
                     <div class="tech-circle">
-                      <img src="images/nextdotjs.svg" alt="Next.js" />
+                      <img
+                        src="images/nextdotjs.svg"
+                        alt="Next.js"
+                        loading="lazy"
+                      />
                     </div>
-                    <div class="tech-circle text-icon"><img src="images/react.svg" alt="React" /></div>
+                    <div class="tech-circle text-icon">
+                      <img src="images/react.svg" alt="React" loading="lazy" />
+                    </div>
                   </div>
 
-                  <!-- Pillar 4: Backend Frameworks (Formerly duplicate Frontend) -->
+                  <!-- Pillar 4: Backend Frameworks -->
                   <div class="comp-capsule pillar-backend-frameworks">
                     <div class="capsule-label">
                       Backend <br />
                       Frameworks
                     </div>
                     <div class="tech-circle">
-                      <img src="images/php.svg" alt="PHP">
+                      <img src="images/php.svg" alt="PHP" loading="lazy" />
                     </div>
                     <div class="sub-icons-row">
                       <div class="tech-box">
-                        <img src="images/flask.svg" alt="Flask" />
+                        <img
+                          src="images/flask.svg"
+                          alt="Flask"
+                          loading="lazy"
+                        />
                       </div>
                       <div class="tech-box">
-                        <img src="images/django.svg" alt="Django" />
+                        <img
+                          src="images/django.svg"
+                          alt="Django"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                   </div>
@@ -596,38 +649,47 @@
                       Backend & <br />
                       APIS
                     </div>
-                      
-                   
+
                     <div class="stack-icons">
-                      <img src="images/go.svg" alt="Go" />
-                      <img src="images/fastapi.svg" alt="FastAPI" />
+                      <img src="images/go.svg" alt="Go" loading="lazy" />
+                      <img
+                        src="images/fastapi.svg"
+                        alt="FastAPI"
+                        loading="lazy"
+                      />
                       <img
                         src="images/nodedotjs.svg"
                         alt="Node"
                         class="mini-icon"
+                        loading="lazy"
                       />
                       <img
                         src="images/python.svg"
                         alt="Python"
                         class="mini-icon"
+                        loading="lazy"
                       />
                       <img
                         src="images/docker.svg"
                         alt="Docker"
                         class="mini-icon"
+                        loading="lazy"
                       />
                     </div>
                   </div>
 
                   <!-- Floating Badge: Cloud -->
                   <div class="floating-badge badge-cloud">
-                    <img src="images/aws.svg" alt="AWS" />
+                    <img src="images/aws.svg" alt="AWS" loading="lazy" />
                     <span class="label">AWS Cloud</span>
-                    <img src="images/googlecloud.svg" alt="GCP" />
+                    <img
+                      src="images/googlecloud.svg"
+                      alt="GCP"
+                      loading="lazy"
+                    />
                     <span class="label">Google Cloud</span>
                   </div>
-
-                  </div>
+                </div>
               </div>
             </section>
             <!-- End Slide 2: Key Competencies -->
@@ -656,58 +718,62 @@
         </div>
         <!-- End .section-slider -->
 
-
         <!-- Contact Section -->
-          <div class="contact-card">
-              <div class="card-icon-header">
-                <div class="icon-circle red-outline" id="contact-circle-bounce"></div>
-              </div>
-              <h3>Find me in my socials</h3>
-              <p>
-                I'm always open to new opportunities and challenges. If you have any questions or would like to work together, please don't hesitate to contact me.
-              </p>
-            </div>
+        <div class="contact-card">
+          <div class="card-icon-header">
+            <div
+              class="icon-circle red-outline"
+              id="contact-circle-bounce"
+            ></div>
+          </div>
+          <h3>Find me in my socials</h3>
+          <p>
+            I'm always open to new opportunities and challenges. If you have any
+            questions or would like to work together, please don't hesitate to
+            contact me.
+          </p>
+        </div>
 
-          <!-- Centered Red Logo -->
-            <div class="contact-logo-container">
-              <div class="contact-logo-wrapper">
-                <img 
-                  src="images/saidimu-logo.png" 
-                  alt="Saidimu Logo" 
-                  class="contact-red-logo"
-                  loading="lazy"
-                  decoding="async"
-                />
-                
-                <!-- Orbiting Social Icons -->
-                <div class="social-orbit">
-                  <!-- Icon 1: WhatsApp -->
-                  <div class="orbit-item" style="--i:0; --total:4">
-                    <div class="icon-circle">
-                      <ion-icon name="logo-whatsapp"></ion-icon>
-                    </div>
-                  </div>
-                  <!-- Icon 2: LinkedIn -->
-                  <div class="orbit-item" style="--i:1; --total:4">
-                    <div class="icon-circle">
-                      <ion-icon name="logo-linkedin"></ion-icon>
-                    </div>
-                  </div>
-                  <!-- Icon 3: Instagram -->
-                  <div class="orbit-item" style="--i:2; --total:4">
-                    <div class="icon-circle">
-                      <ion-icon name="logo-instagram"></ion-icon>
-                    </div>
-                  </div>
-                  <!-- Icon 4: GitHub -->
-                  <div class="orbit-item" style="--i:3; --total:4">
-                    <div class="icon-circle">
-                      <ion-icon name="logo-github"></ion-icon>
-                    </div>
-                  </div>
+        <!-- Centered Red Logo -->
+        <div class="contact-logo-container">
+          <div class="contact-logo-wrapper">
+            <img
+              src="images/saidimu-logo.png"
+              alt="Saidimu Logo"
+              class="contact-red-logo"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <!-- Orbiting Social Icons -->
+            <div class="social-orbit">
+              <!-- Icon 1: WhatsApp -->
+              <div class="orbit-item" style="--i: 0; --total: 4">
+                <div class="icon-circle">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+              </div>
+              <!-- Icon 2: LinkedIn -->
+              <div class="orbit-item" style="--i: 1; --total: 4">
+                <div class="icon-circle">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </div>
+              </div>
+              <!-- Icon 3: Instagram -->
+              <div class="orbit-item" style="--i: 2; --total: 4">
+                <div class="icon-circle">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+              </div>
+              <!-- Icon 4: GitHub -->
+              <div class="orbit-item" style="--i: 3; --total: 4">
+                <div class="icon-circle">
+                  <ion-icon name="logo-github"></ion-icon>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
         <!-- contact section -->
         <section id="contacts" class="contact-area">
@@ -721,7 +787,11 @@
               <div class="contact-info-stack">
                 <a href="mailto:saidimu@jiaminie.com" class="action-bar">
                   <div class="badge-icon">
-                    <img src="images/zoho.svg" alt="Email Icon" />
+                    <img
+                      src="images/zoho.svg"
+                      alt="Email Icon"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="badge-text">
                     <span class="label">Email</span>
@@ -729,8 +799,12 @@
                   </div>
                 </a>
                 <a href="tel:+254704696287" class="action-bar">
-                   <div class="badge-icon">
-                    <img src="images/whatsapp.svg" alt="Phone Icon" />
+                  <div class="badge-icon">
+                    <img
+                      src="images/whatsapp.svg"
+                      alt="Phone Icon"
+                      loading="lazy"
+                    />
                   </div>
                   <div class="badge-text">
                     <span class="label">Phone</span>
@@ -783,8 +857,6 @@
                 </form>
               </div>
             </div>
-
-          
           </div>
         </section>
 
@@ -821,16 +893,19 @@
       </defs>
     </svg>
 
+    <!-- Defer non-critical scripts -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
     ></script>
 
-    <script>
+    <script defer>
       /**
        * PROJECT DATA
        */
@@ -904,10 +979,7 @@
        * CONSTANTS
        */
       const CONTAINER_WIDTH = 1000;
-      const CONTAINER_HEIGHT = 600;
       const BALL_RADIUS = 50;
-      const BALL_DIAMETER = 100;
-      const DIP_DEPTH = BALL_RADIUS;
       const DIP_HALF_WIDTH = BALL_RADIUS;
       const TRANSITION_LENGTH = 60;
       const EDGE_PADDING = 10;
@@ -927,7 +999,7 @@
       let cardWidth = 0;
 
       /**
-       * DOM REFERENCES
+       * DOM REFERENCES - cached
        */
       const card = document.querySelector(".portfolio-card");
       const circle = document.getElementById("profileCircle");
@@ -935,6 +1007,9 @@
       const problemContent = document.getElementById("problemContent");
       const solutionContent = document.getElementById("solutionContent");
       const contentImage = document.getElementById("contentImage");
+
+      // Use requestAnimationFrame for smooth animations
+      let rafId = null;
 
       function calculateTitlePositions() {
         cardWidth = card.offsetWidth;
@@ -956,33 +1031,12 @@
         const cp1x = ballCenterX - dipWidth / 4;
         const cp2x = ballCenterX + dipWidth / 4;
 
-        // Card height is 750px, corner radius is 80px
-        return `
-        M 80 0
-        L ${startX} 0
-        C ${cp1x} 0, ${cp1x} ${dipDepth}, ${ballCenterX} ${dipDepth}
-        C ${cp2x} ${dipDepth}, ${cp2x} 0, ${endX} 0
-        L 920 0
-        A 80 80 0 0 1 1000 80
-        L 1000 670
-        A 80 80 0 0 1 920 750
-        L 80 750
-        A 80 80 0 0 1 0 670
-        L 0 80
-        A 80 80 0 0 1 80 0
-        Z
-      `
-          .replace(/\s+/g, " ")
-          .trim();
+        return `M 80 0 L ${startX} 0 C ${cp1x} 0, ${cp1x} ${dipDepth}, ${ballCenterX} ${dipDepth} C ${cp2x} ${dipDepth}, ${cp2x} 0, ${endX} 0 L 920 0 A 80 80 0 0 1 1000 80 L 1000 670 A 80 80 0 0 1 920 750 L 80 750 A 80 80 0 0 1 0 670 L 0 80 A 80 80 0 0 1 80 0 Z`;
       }
 
       function updateCirclePosition(centerX, animate = false) {
         const leftCSS = centerX - BALL_RADIUS;
-        if (animate) {
-          circle.style.transition = "left 0.3s ease-out";
-        } else {
-          circle.style.transition = "none";
-        }
+        circle.style.transition = animate ? "left 0.3s ease-out" : "none";
         circle.style.left = `${leftCSS}px`;
       }
 
@@ -1004,8 +1058,9 @@
         return closestIndex;
       }
 
+      // Fragment optimization
       function renderTitles() {
-        titlesContainer.innerHTML = "";
+        const fragment = document.createDocumentFragment();
         projects.forEach((project, index) => {
           const titleEl = document.createElement("div");
           titleEl.className = "project-title";
@@ -1015,8 +1070,10 @@
           titleEl.addEventListener("click", () => {
             animateCircleToProject(index);
           });
-          titlesContainer.appendChild(titleEl);
+          fragment.appendChild(titleEl);
         });
+        titlesContainer.innerHTML = "";
+        titlesContainer.appendChild(fragment);
       }
 
       function updateTitleStyles(activeIndex) {
@@ -1042,11 +1099,9 @@
           "<ul>" +
           project.solution.map((item) => `<li>${item}</li>`).join("") +
           "</ul>";
-        if (project.image) {
-          contentImage.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
-        } else {
-          contentImage.innerHTML = "Project Image";
-        }
+        contentImage.innerHTML = project.image
+          ? `<img src="${project.image}" alt="${project.title}" loading="lazy">`
+          : "Project Image";
       }
 
       function update() {
@@ -1071,37 +1126,40 @@
         }, 150);
       }
 
-      circle.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        circle.classList.add("dragging");
-        const circleRect = circle.getBoundingClientRect();
-        const circleCenterXScreen = circleRect.left + circleRect.width / 2;
-        dragOffsetX = e.clientX - circleCenterXScreen;
-        e.preventDefault();
-      });
+      // Optimized drag handlers
+      circle.addEventListener(
+        "mousedown",
+        (e) => {
+          isDragging = true;
+          circle.classList.add("dragging");
+          const circleRect = circle.getBoundingClientRect();
+          const circleCenterXScreen = circleRect.left + circleRect.width / 2;
+          dragOffsetX = e.clientX - circleCenterXScreen;
+          e.preventDefault();
+        },
+        { passive: false },
+      );
 
       document.addEventListener("mousemove", (e) => {
         if (!isDragging) return;
-        const wrapper = document.querySelector(".portfolio-wrapper");
-        const wrapperRect = wrapper.getBoundingClientRect();
 
-        // Calculate scale factor: rendered width vs internal logical width
-        const currentScale = wrapperRect.width / CONTAINER_WIDTH;
+        if (rafId) cancelAnimationFrame(rafId);
 
-        // Adjust the drag offset and position by the scale
-        // Relative X in screen pixels
-        const relativeXScreen = e.clientX - wrapperRect.left;
+        rafId = requestAnimationFrame(() => {
+          const wrapper = document.querySelector(".portfolio-wrapper");
+          const wrapperRect = wrapper.getBoundingClientRect();
+          const currentScale = wrapperRect.width / CONTAINER_WIDTH;
+          const relativeXScreen = e.clientX - wrapperRect.left;
+          const newCenterX =
+            relativeXScreen / currentScale - dragOffsetX / currentScale;
 
-        // Convert to internal pixels
-        const newCenterX =
-          relativeXScreen / currentScale - dragOffsetX / currentScale;
-
-        circleCenterX = Math.max(
-          MIN_BALL_CENTER_X,
-          Math.min(MAX_BALL_CENTER_X, newCenterX)
-        );
-        updateCirclePosition(circleCenterX, false);
-        update();
+          circleCenterX = Math.max(
+            MIN_BALL_CENTER_X,
+            Math.min(MAX_BALL_CENTER_X, newCenterX),
+          );
+          updateCirclePosition(circleCenterX, false);
+          update();
+        });
       });
 
       document.addEventListener("mouseup", () => {
@@ -1111,14 +1169,20 @@
         }
       });
 
+      // Debounced resize handler
+      let resizeTimer;
       window.addEventListener("resize", () => {
-        calculateTitlePositions();
-        renderTitles();
-        circleCenterX = titlePositions[activeProjectIndex];
-        updateCirclePosition(circleCenterX, false);
-        update();
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          calculateTitlePositions();
+          renderTitles();
+          circleCenterX = titlePositions[activeProjectIndex];
+          updateCirclePosition(circleCenterX, false);
+          update();
+        }, 150);
       });
 
+      // Optimize DOMContentLoaded
       window.addEventListener("DOMContentLoaded", () => {
         calculateTitlePositions();
         const middleIndex = Math.floor(projects.length / 2);
@@ -1141,77 +1205,82 @@
           });
         }
 
-        // Magic Menu Logic
-        const magicList = document.querySelectorAll(
-          ".navigation-sidebar .list"
-        );
+        // Magic Menu Logic - Delegated event handling
+        const magicNav = document.getElementById("magicNav");
+        const mobileMagicNav = document.getElementById("mobileMagicNav");
         const magicIndicator = document.querySelector(
-          ".navigation-sidebar .indicator"
-        );
-        const mobileMagicList = document.querySelectorAll(
-          ".mobile-magic-nav .list"
+          ".navigation-sidebar .indicator",
         );
         const mobileMagicIndicator = document.querySelector(
-          ".mobile-magic-nav .indicator"
+          ".mobile-magic-nav .indicator",
         );
-        const magicLabels = document.querySelectorAll(".nav-labels .nav-label");
+        const navLabels = document.querySelector(".nav-labels");
 
         function moveMagicIndicator(index) {
-          // Desktop indicator (Vertical)
           if (magicIndicator) {
             magicIndicator.style.transform = `translateY(${index * 70}px)`;
           }
-          magicList.forEach((item) => item.classList.remove("active"));
-          if (magicList[index]) magicList[index].classList.add("active");
-
-          // Mobile indicator (Horizontal)
           if (mobileMagicIndicator) {
-            mobileMagicIndicator.style.transform = `translateX(${
-              index * 70
-            }px)`;
+            mobileMagicIndicator.style.transform = `translateX(${index * 70}px)`;
           }
-          mobileMagicList.forEach((item) => item.classList.remove("active"));
-          if (mobileMagicList[index])
-            mobileMagicList[index].classList.add("active");
 
-          // Update Labels
-          magicLabels.forEach((label) => label.classList.remove("active"));
-          if (magicLabels[index]) {
-            magicLabels[index].classList.add("active");
+          // Update active classes
+          document
+            .querySelectorAll(
+              ".navigation-sidebar .list, .mobile-magic-nav .list",
+            )
+            .forEach((item) => item.classList.remove("active"));
+          document
+            .querySelectorAll(
+              ".navigation-sidebar .list, .mobile-magic-nav .list",
+            )
+            [index]?.classList.add("active");
+          document
+            .querySelectorAll(".nav-labels .nav-label")
+            .forEach((label) => label.classList.remove("active"));
+          document
+            .querySelectorAll(".nav-labels .nav-label")
+            [index]?.classList.add("active");
+        }
+
+        // Event delegation for nav labels
+        if (navLabels) {
+          navLabels.addEventListener("click", (e) => {
+            if (e.target.classList.contains("nav-label")) {
+              const index = parseInt(e.target.getAttribute("data-index"));
+              moveMagicIndicator(index);
+            }
+          });
+        }
+
+        // Event delegation for navigation
+        function handleNavClick(e) {
+          const listItem = e.target.closest(".list");
+          if (!listItem) return;
+
+          e.preventDefault();
+          const items = Array.from(
+            listItem.parentElement.querySelectorAll(".list"),
+          );
+          const index = items.indexOf(listItem);
+          moveMagicIndicator(index);
+
+          const targetId = listItem.getAttribute("data-target");
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
           }
         }
 
-        magicList.forEach((item, index) => {
-          item.addEventListener("click", (e) => {
-            e.preventDefault();
-            moveMagicIndicator(index);
+        if (magicNav) magicNav.addEventListener("click", handleNavClick);
+        if (mobileMagicNav)
+          mobileMagicNav.addEventListener("click", handleNavClick);
 
-            const targetId = item.getAttribute("data-target");
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-              targetSection.scrollIntoView({ behavior: "smooth" });
-            }
-          });
-        });
-
-        mobileMagicList.forEach((item, index) => {
-          item.addEventListener("click", (e) => {
-            e.preventDefault();
-            moveMagicIndicator(index);
-
-            const targetId = item.getAttribute("data-target");
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-              targetSection.scrollIntoView({ behavior: "smooth" });
-            }
-          });
-        });
-
-        // Intersection Observer to update active menu on scroll
+        // Intersection Observer - Throttled
         const sections = ["projects", "skills", "about", "contacts"];
         const observerOptions = {
           root: null,
-          rootMargin: "-50% 0px -50% 0px", // Trigger when section is in middle of viewport
+          rootMargin: "-50% 0px -50% 0px",
           threshold: 0,
         };
 
@@ -1227,8 +1296,12 @@
           });
         }, observerOptions);
 
-        // Terminal Typing Animation
-        // Typewriter Class
+        sections.forEach((id) => {
+          const element = document.getElementById(id);
+          if (element) observer.observe(element);
+        });
+
+        // Typewriter Class - Optimized
         class Typewriter {
           constructor(element, lines, options = {}) {
             this.element = element;
@@ -1259,20 +1332,23 @@
             if (this.isDeleting) {
               this.element.textContent = currentLine.substring(
                 0,
-                this.charIndex - 1
+                this.charIndex - 1,
               );
               this.charIndex--;
               currentSpeed = this.options.deleteSpeed;
             } else {
               this.element.textContent = currentLine.substring(
                 0,
-                this.charIndex + 1
+                this.charIndex + 1,
               );
               this.charIndex++;
             }
 
             if (!this.isDeleting && this.charIndex === currentLine.length) {
-              if (!this.options.loop && this.lineIndex === this.lines.length - 1) {
+              if (
+                !this.options.loop &&
+                this.lineIndex === this.lines.length - 1
+              ) {
                 this.isFinished = true;
                 return;
               }
@@ -1288,7 +1364,7 @@
           }
         }
 
-        // Terminal Typing Animation (Looping)
+        // Terminal Typing Animation
         const terminalText = document.getElementById("terminalText");
         const terminalLines = [
           "whoami",
@@ -1302,47 +1378,54 @@
           "clear",
           "System Ready.",
         ];
-        
+
         if (terminalText) {
-           new Typewriter(terminalText, terminalLines, { loop: true });
+          new Typewriter(terminalText, terminalLines, { loop: true });
         }
 
-        // Contact Card Typing Animation (One-time)
-        const contactCardTitle = document.querySelector(".contact-card h3");
-        const contactCardDesc = document.querySelector(".contact-card p");
+        // Contact Card Typing - Lazy load with Intersection Observer
+        const contactCard = document.querySelector(".contact-card");
+        if (contactCard) {
+          const contactCardTitle = contactCard.querySelector("h3");
+          const contactCardDesc = contactCard.querySelector("p");
+          const contactCircle = document.getElementById(
+            "contact-circle-bounce",
+          );
 
-        if (contactCardTitle && contactCardDesc) {
-          // Store original text
-          const titleText = contactCardTitle.textContent.trim();
-          const descText = contactCardDesc.textContent.trim();
-          const contactCircle = document.getElementById("contact-circle-bounce");
+          if (contactCardTitle && contactCardDesc) {
+            const titleText = contactCardTitle.textContent.trim();
+            const descText = contactCardDesc.textContent.trim();
+            contactCardTitle.textContent = "";
+            contactCardDesc.textContent = "";
 
-          // Clear initial text
-          contactCardTitle.textContent = "";
-          contactCardDesc.textContent = "";
+            const contactObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    if (contactCircle) {
+                      contactCircle.classList.add("bounce-enter");
+                    }
 
-          // Start typing when section comes into view
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // Trigger bounce animation
-                if (contactCircle) {
-                    contactCircle.classList.add("bounce-enter");
-                }
-                
-                // Start applying typewriter effects
-                new Typewriter(contactCardTitle, [titleText], { loop: false, typeSpeed: 50 });
-                // Delay description slightly
-                setTimeout(() => {
-                    new Typewriter(contactCardDesc, [descText], { loop: false, typeSpeed: 30 });
-                }, 1000);
-                
-                observer.disconnect(); // Only run once
-              }
-            });
-          }, { threshold: 0.5 });
+                    new Typewriter(contactCardTitle, [titleText], {
+                      loop: false,
+                      typeSpeed: 50,
+                    });
+                    setTimeout(() => {
+                      new Typewriter(contactCardDesc, [descText], {
+                        loop: false,
+                        typeSpeed: 30,
+                      });
+                    }, 1000);
 
-          observer.observe(document.querySelector(".contact-card"));
+                    contactObserver.disconnect();
+                  }
+                });
+              },
+              { threshold: 0.5 },
+            );
+
+            contactObserver.observe(contactCard);
+          }
         }
       });
     </script>
