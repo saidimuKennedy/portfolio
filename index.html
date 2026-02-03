@@ -149,7 +149,7 @@
                 decoding="async"
             /></a>
             <a
-              href="https://github.com/saidimu-kennedy"
+              href="https://github.com/saidimuKennedy"
               class="social-icon"
               rel="noopener"
               ><img
@@ -449,7 +449,14 @@
                 />
               </div>
               <div class="jchats-title">
-                <h1>JChats - Automated Lead Engagement Platform</h1>
+                <a
+                  href="https://www.jiaminie.co.ke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="text-decoration: none; color: inherit"
+                >
+                  <h1>JChats - Automated Lead Engagement Platform</h1>
+                </a>
               </div>
             </div>
             <div class="jchats-card-container">
@@ -926,6 +933,7 @@
             "Automated booking system with calendar integration",
           ],
           image: "/images/rongai-movers.png",
+          link: "https://rongai-movers.vercel.app/",
         },
         {
           id: 2,
@@ -941,6 +949,7 @@
             "Basic commerce flow (pricing, interest capture, follow-up)",
           ],
           image: "/images/njenga-ngugi.png",
+          link: "https://njenga-ngugi.vercel.app/",
         },
         {
           id: 3,
@@ -955,6 +964,7 @@
             "Direct-to-consumer sales platform with integrated logistics",
           ],
           image: "/images/waruiru-farm.jpg",
+          link: "https://waruiru-farm-theta.vercel.app/",
         },
         {
           id: 4,
@@ -1100,7 +1110,15 @@
           project.solution.map((item) => `<li>${item}</li>`).join("") +
           "</ul>";
         contentImage.innerHTML = project.image
-          ? `<img src="${project.image}" alt="${project.title}" loading="lazy">`
+          ? `<a href="${
+              project.link || "#"
+            }" target="_blank" rel="noopener noreferrer" style="display: block; cursor: ${
+              project.link ? "pointer" : "default"
+            }">
+               <img src="${project.image}" alt="${
+                 project.title
+               }" loading="lazy">
+             </a>`
           : "Project Image";
       }
 

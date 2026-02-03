@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coupled Hero Section</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
+      /* THE ANCHOR: Everything inside moves together */
+      .container {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* THE IMAGE: Absolute within the relative container */
+      img {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -125px;
+
+        padding: 10px;
+        border-radius: 20px;
+        width: 120px;
+        height: 120px;
+        background-color: white;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* THE CARD: The base of the relationship */
+      .card {
+        position: absolute;
+        background-color: white;
+        border-radius: 30px;
+        top: 50%;
+        left: 50%;
+        margin-left: -125px;
+        margin-top: -125px;
+        width: auto;
+        min-width: 400px;
+        height: auto;
+        padding: 30px; /* Space for the image to overlap without covering text */
+        box-sizing: border-box;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .intricate-card {
+        width: 95%;
+        max-width: 700px;
+        aspect-ratio: 1.4;
+        clip-path: url(#intricateShape);
+        background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/images/aws.svg" alt="AWS Logo" />
+      <div class="card">
+        <h2 style="margin: 0">Systems Engineer</h2>
+        <p>
+          Contents for the hero section Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Ullam repellendus quos ad perspiciatis.
+          Reprehenderit accusamus iure deleniti, aperiam ad possimus aspernatur
+          mollitia rem labore minima culpa dolorem debitis saepe est!
+        </p>
+        <p>Contents for the hero section...</p>
+        <p>Contents for the hero section...</p>
+        <p>Contents for the hero section...</p>
+        <p>Contents for the hero section...</p>
+        <p>Contents for the hero section...</p>
+      </div>
+    </div>
+    <!-- Hidden SVG for scalable clip-path -->
+    <svg width="0" height="0" style="position: absolute; pointer-events: none">
+      <defs>
+        <clipPath id="intricateShape" clipPathUnits="objectBoundingBox">
+          <!-- 
+            CONVERSION FORMULA:
+            - Divide all X coordinates by 700 (original width)
+            - Divide all Y coordinates by 500 (original height)
+            - Divide arc radii: horizontal by 700, vertical by 500
+            
+            Original path:
+            M 0 190 A 60 60 0 0 1 60 130 L 260 130 A 60 60 0 0 0 320 70 V 60 A 60 60 0 0 1 380 0 L 640 0 A 60 60 0 0 1 700 60 L 700 440 A 60 60 0 0 1 640 500 L 60 500 A 60 60 0 0 1 0 440 Z
+            
+            Converted path (all values between 0 and 1):
+          -->
+          <path
+            d="
+            M 0 0.38
+            A 0.0857 0.12 0 0 1 0.0857 0.26
+            L 0.3714 0.26
+            A 0.0857 0.12 0 0 0 0.4571 0.14
+            V 0.12
+            A 0.0857 0.12 0 0 1 0.5429 0
+            L 0.9143 0
+            A 0.0857 0.12 0 0 1 1 0.12
+            L 1 0.88
+            A 0.0857 0.12 0 0 1 0.9143 1
+            L 0.0857 1
+            A 0.0857 0.12 0 0 1 0 0.88
+            Z
+          "
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </body>
+  <script>
+    // Show live dimensions
+    function updateDimensions() {
+      const card = document.querySelector(".intricate-card");
+      const rect = card.getBoundingClientRect();
+      document.getElementById("dimensions").textContent =
+        `Width: ${Math.round(rect.width)}px\nHeight: ${Math.round(rect.height)}px`;
+    }
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+  </script>
+</html>
