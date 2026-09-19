@@ -315,10 +315,11 @@ aside {
 /* Refined Grid Section */
 .info-grid {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 1.25fr);
   min-height: 100vh;
   background-color: #f8f9fa;
   position: relative;
+  width: 100%;
 }
 
 .grid-decorative {
@@ -330,14 +331,15 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 30px;
   overflow: hidden;
+  min-width: 0;
 }
 
 /* Terminal Styles */
 .terminal-container {
-  width: 95%;
-  max-width: 380px;
+  width: 100%;
+  max-width: 540px;
   background-color: #1e1e1e;
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -414,11 +416,14 @@ aside {
 }
 
 .grid-content {
-  padding: 80px;
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1100px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .about-card {
@@ -428,10 +433,186 @@ aside {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .about-card:hover {
   transform: translateY(-5px);
+}
+
+/* F1 Racing Card Flare Styling */
+.f1-card {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #c02424;
+}
+
+.f1-speed-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #c02424 0%, #ff2800 60%, transparent 100%);
+}
+
+.f1-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.f1-sector-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.f1-number {
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  color: #c02424;
+  line-height: 1;
+  font-family: Impact, "Arial Black", sans-serif;
+  letter-spacing: -1px;
+}
+
+.f1-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  transform: skewX(-10deg);
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tire-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tire-dot.red {
+  background-color: #ff2800;
+  box-shadow: 0 0 6px rgba(255, 40, 0, 0.6);
+}
+
+.tire-dot.yellow {
+  background-color: #ffd700;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+.tire-dot.white {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.compound-soft {
+  background-color: rgba(192, 36, 36, 0.08);
+  color: #c02424;
+  border: 1px solid rgba(192, 36, 36, 0.2);
+}
+
+.compound-medium {
+  background-color: rgba(255, 180, 0, 0.1);
+  color: #b8860b;
+  border: 1px solid rgba(255, 180, 0, 0.3);
+}
+
+.compound-hard {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.f1-start-lights {
+  display: flex;
+  gap: 5px;
+  background: #1e1e1e;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.f1-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #444;
+}
+
+.f1-light.active {
+  background-color: #ff2800;
+  box-shadow: 0 0 8px #ff2800;
+}
+
+.f1-radio-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1e1e1e;
+  color: #00ff66;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.radio-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00ff66;
+  box-shadow: 0 0 8px #00ff66;
+  animation: pulse-green 1.5s infinite;
+}
+
+@keyframes pulse-green {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.f1-drs-badge {
+  background: #00e676;
+  color: #000;
+  font-weight: 900;
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  transform: skewX(-10deg);
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 230, 118, 0.4);
+}
+
+.f1-telemetry-bar {
+  margin-top: 20px;
+  background: #1e1e1e;
+  color: #aaa;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.green-text {
+  color: #00ff66;
 }
 
 .card-icon-header {
@@ -847,11 +1028,14 @@ section p {
 
 .jchats-red-card {
   background-color: #c02424;
-  height: 500px; /* Updated height */
+  /* Grow with the copy so the bottom padding is never eaten (the notch script reads the
+     measured height), with the original 500px as the design minimum. */
+  height: auto;
+  min-height: 500px;
   width: 100%;
   position: relative;
   /* Increased top-left padding to push content away from the clipped extraction area */
-  padding: 160px 40px 40px 60px;
+  padding: 160px 60px 60px;
   color: white;
   clip-path: path(
     "M 0 190 A 60 60 0 0 1 60 130 L 260 130 A 60 60 0 0 0 320 70 V 60 A 60 60 0 0 1 380 0 L 640 0 A 60 60 0 0 1 700 60 L 700 440 A 60 60 0 0 1 640 500 L 60 500 A 60 60 0 0 1 0 440 Z"
@@ -872,30 +1056,76 @@ section p {
   font-size: 16px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
-  max-width: 60%; /* Limit width to avoid overlapping the display screen too much */
+  /* Keep clear of the (wider) display card on the right. */
+  max-width: 44%;
 }
 
 .jchats-display-screen {
   background-color: #d9d9d9;
-  width: 40%;
-  height: 300px;
-  border-radius: 30px;
+  width: 48%;
+  height: auto;
+  border-radius: 36px;
   position: absolute;
   right: -30px;
   top: 120px;
   z-index: 10;
-  padding: 40px;
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+.jchats-display-screen h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #c02424;
+}
+
 .jchats-display-screen p {
+  margin: 0;
+  font-size: 15px;
+  color: #3f3f3f;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.jchats-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: #c02424;
+  padding: 10px 22px;
+  border-radius: 50px;
   font-size: 14px;
-  color: #333;
-  line-height: 1.6;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  margin-top: 6px;
+}
+
+.jchats-cta-btn:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #a01d1d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.jchats-cta-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.jchats-cta-btn:hover svg {
+  transform: translate(2px, -2px);
 }
 
 /* Subheading Styling */
@@ -1383,20 +1613,18 @@ section p {
 .portfolio-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1100px; /* Increased for more horizontal space */
+  max-width: 1280px; /* Wider card for more horizontal space */
   margin: 0 auto;
 }
 
 /* Red card with dynamic clip-path */
 .portfolio-card {
   background-color: #c02424;
-  height: 750px; /* Increased height for larger images */
+  height: 800px; /* Increased height for larger images */
   width: 100%;
   position: relative;
-  /* Dynamic clip-path with 80px rounded corners - updated by JS */
-  clip-path: path(
-    "M 40 0 L 920 0 A 40 40 0 0 1 1000 40 L 1000 670 A 40 40 0 0 1 920 750 L 40 750 A 40 40 0 0 1 0 670 L 0 80 A 40 40 0 0 1 80 0 Z"
-  );
+  /* Dynamic clip-path updated by JS; inset fallback scales with the card */
+  clip-path: inset(0 round 80px);
   padding: 130px 60px 60px 60px;
   transition: clip-path 0.15s ease-out;
   box-shadow: 0 20px 60px rgba(192, 36, 36, 0.25);
@@ -2409,7 +2637,7 @@ section p {
 
   .about-card {
     width: 100%;
-    min-width: 300px;
+    min-width: 0;
     margin: 0 auto;
   }
 
@@ -2508,6 +2736,11 @@ section p {
     padding: 40px;
   }
 
+  /* Stacked layout: the display card sits below, so the body copy can use full width. */
+  .jchats-red-card p {
+    max-width: 100%;
+  }
+
   /* 2. JChats Image Circle */
   .jchats-image-circle {
     width: 100%;
@@ -2523,7 +2756,7 @@ section p {
     left: auto;
     transform: none;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
