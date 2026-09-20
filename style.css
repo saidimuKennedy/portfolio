@@ -696,12 +696,15 @@ aside {
 }
 @media (max-width: 768px) {
   .about-card {
-    max-width: 370px;
+    max-width: 100%;
     width: 100%;
+    box-sizing: border-box;
+    padding: 24px 18px;
+    margin: 0;
   }
   .terminal-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
@@ -992,19 +995,16 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
-  height: 46px;
-  background: #1c1c1e;
-  border-radius: 50%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: transparent;
+  box-shadow: none;
 }
 
 .f1-light-dot {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #3a1010;
-  border: 1px solid #4a1515;
+  background: #e2d2d2;
+  border: 2px solid #d4c2c2;
   transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
@@ -1230,19 +1230,24 @@ section p {
   gap: 20px;
 }
 
+.jchats-red-card .info-section {
+  max-width: 44%;
+}
+
 .jchats-red-card h3 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  opacity: 1;
   color: #fff;
 }
 
 .jchats-red-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
-  /* Keep clear of the (wider) display card on the right. */
-  max-width: 44%;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .jchats-display-screen {
@@ -1668,7 +1673,7 @@ section p {
 @media (max-width: 900px) {
   .competencies-visual-container {
     min-height: auto;
-    padding: 20px;
+    padding: 20px 10px 0 10px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -1685,15 +1690,19 @@ section p {
     display: block !important;
     min-width: 900px;
     width: 1000px;
-    height: 480px;
+    height: 440px;
   }
 
   .competencies-grid-new {
     flex-direction: row; /* Keep row layout */
     width: auto;
     min-width: 900px; /* Force minimum width to keep pillars spread out */
-    height: 600px; /* Ensure enough height for floating animations */
+    height: 440px; /* Reduced from 600px to eliminate dead white space */
     gap: 0;
+  }
+
+  .key-competencies {
+    padding-bottom: 20px !important;
   }
 
   /* Reset any mobile-specific overrides that might force stacking */
@@ -1951,12 +1960,12 @@ section p {
 }
 
 .section-title {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .section-content {
@@ -2595,15 +2604,17 @@ section p {
 
 @media (max-width: 992px) {
   .socials-grid-section {
-    padding: 40px 1rem;
+    padding: 36px 0.75rem;
     border-radius: 0 !important;
   }
 
   .socials-3col-grid {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .socials-3col-grid .contact-card {
@@ -2613,33 +2624,48 @@ section p {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .socials-3col-grid .contact-form-container {
     order: 0;
     width: 100%;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
   }
 
   .socials-3col-grid .contact-info-stack {
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .socials-3col-grid .action-bar {
     width: 100%;
     min-width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     justify-content: flex-start;
+    margin: 0;
   }
 
   .socials-3col-grid .contact-form-card {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     padding: 24px 18px;
+    margin: 0;
   }
 
   .socials-3col-grid .contact-dock-container {
     order: 1;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -2804,12 +2830,23 @@ section p {
     height: 60px;
   }
 
+  .socials-3col-grid .contact-form-card,
   .contact-form-card {
-    padding: 30px 20px;
+    padding: 22px 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
   }
 
+  .socials-3col-grid .action-bar,
   .action-bar {
-    padding: 20px;
+    padding: 14px 18px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
   }
 
   .action-bar .value {
@@ -3281,18 +3318,24 @@ section p {
   }
 
   .grid-content {
-    padding: 20px;
+    padding: 30px 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     text-align: left;
   }
 
   .about-card {
     width: 100%;
+    max-width: 100%;
     min-width: 0;
-    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 24px 18px;
+    margin: 0;
   }
 
   .blob-divider {
@@ -3391,6 +3434,7 @@ section p {
   }
 
   /* Stacked layout: the display card sits below, so the body copy can use full width. */
+  .jchats-red-card .info-section,
   .jchats-red-card p {
     max-width: 100%;
   }
@@ -3427,6 +3471,14 @@ section p {
 
   /* Portfolio Card Simplification (Tablet & Mobile) */
   /* Remove scaling to fix readability issues */
+  .projects {
+    gap: 20px;
+  }
+
+  .projects .section-intro-text {
+    margin-bottom: 0;
+  }
+
   .portfolio-wrapper {
     transform: none !important;
     width: 100% !important;
@@ -3439,7 +3491,8 @@ section p {
     height: auto !important;
     overflow: visible !important;
     display: block !important;
-    margin-bottom: 60px;
+    margin-top: 0 !important;
+    margin-bottom: 40px;
   }
 
   .portfolio-card {
@@ -3698,7 +3751,8 @@ section p {
     height: auto; /* Allow growth */
     overflow: visible;
     display: block;
-    margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 
   .portfolio-card {
@@ -3785,8 +3839,11 @@ section p {
   }
 
   /* Contact Card */
-  .contact-card {
-    padding: 25px 20px;
+  .socials-3col-grid .contact-card {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .contact-card h3 {
@@ -3800,11 +3857,13 @@ section p {
   /* Badges */
   .socials-3col-grid .action-bar,
   .action-bar {
-    padding: 15px 20px;
-    gap: 15px;
+    padding: 14px 18px;
+    gap: 14px;
     width: 100%; /* Full width on mobile */
     min-width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    margin: 0;
   }
 
   .badge-icon {
@@ -3820,8 +3879,10 @@ section p {
 
   .socials-3col-grid .contact-form-card,
   .contact-form-card {
-    padding: 24px 18px;
+    padding: 22px 16px;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    margin: 0;
   }
 }
