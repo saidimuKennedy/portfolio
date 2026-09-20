@@ -2246,6 +2246,29 @@ section p {
   gap: 15px;
 }
 
+.form-result {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: none;
+}
+
+.form-result.success {
+  display: block;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.form-result.error {
+  display: block;
+  background-color: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
 /* Contact Logo Styling */
 .contact-logo-container {
   display: flex;

@@ -833,7 +833,28 @@
 
               <div class="contact-form-card" id="contact-form-card">
                 <h3>Send a Message</h3>
-                <form action="#" method="POST">
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  id="contactForm"
+                >
+                  <!-- Web3Forms Key: Paste your key from https://web3forms.com below -->
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="b1a15bf9-dc68-4746-bf05-993c6577f27f"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Portfolio Message from Visitor"
+                  />
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    style="display: none;"
+                  />
+
                   <div class="form-group">
                     <input
                       type="text"
@@ -858,8 +879,8 @@
                       required
                     ></textarea>
                   </div>
-                  <button type="submit" class="send-btn">
-                    Connect
+                  <button type="submit" class="send-btn" id="sendBtn">
+                    <span>Connect</span>
                     <svg
                       width="20"
                       height="20"
@@ -872,6 +893,7 @@
                       <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                     </svg>
                   </button>
+                  <div id="formResult" class="form-result"></div>
                 </form>
               </div>
             </div>
@@ -1711,6 +1733,71 @@
           }, { threshold: 0.5 });
 
           observer.observe(gantryContainer);
+        }
+      })();
+
+      // Web3Forms Contact Form AJAX Handler
+      (function () {
+        const contactForm = document.getElementById("contactForm");
+        const formResult = document.getElementById("formResult");
+        const sendBtn = document.getElementById("sendBtn");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            const btnText = sendBtn ? sendBtn.querySelector("span") : null;
+            if (sendBtn && btnText) {
+              sendBtn.disabled = true;
+              sendBtn.style.opacity = "0.7";
+              btnText.textContent = "Sending...";
+            }
+
+            if (formResult) {
+              formResult.className = "form-result";
+              formResult.style.display = "none";
+            }
+
+            fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: json,
+            })
+              .then(async (response) => {
+                let res = await response.json();
+                if (response.status === 200) {
+                  if (formResult) {
+                    formResult.className = "form-result success";
+                    formResult.textContent = "Message sent successfully! I will get back to you soon.";
+                  }
+                  contactForm.reset();
+                } else {
+                  if (formResult) {
+                    formResult.className = "form-result error";
+                    formResult.textContent = res.message || "Something went wrong. Please try again.";
+                  }
+                }
+              })
+              .catch((error) => {
+                if (formResult) {
+                  formResult.className = "form-result error";
+                  formResult.textContent = "Something went wrong. Please try again later.";
+                }
+              })
+              .then(() => {
+                if (sendBtn && btnText) {
+                  sendBtn.disabled = false;
+                  sendBtn.style.opacity = "1";
+                  btnText.textContent = "Connect";
+                }
+              });
+          });
         }
       })();
     </script>
