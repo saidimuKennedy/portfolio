@@ -33,14 +33,35 @@
           <div class="horizontal-line"></div>
           <div class="sidebar-nav-wrapper">
             <div class="nav-labels">
-              <span class="nav-label active" data-index="0">Projects</span>
-              <span class="nav-label" data-index="1">Skills</span>
-              <span class="nav-label" data-index="2">About Me</span>
+              <span class="nav-label active" data-index="0">About Me</span>
+              <span class="nav-label" data-index="1">Projects</span>
+              <span class="nav-label" data-index="2">Skills</span>
               <span class="nav-label" data-index="3">Contacts</span>
             </div>
             <div class="navigation-sidebar">
               <ul id="magicNav">
-                <li class="list active" data-target="projects">
+                <li class="list active" data-target="about">
+                  <a href="#about"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-user"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                      <path
+                        d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="list" data-target="projects">
                   <a href="#projects"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -77,27 +98,6 @@
                       <path d="M7 8l-1.5 1.5" />
                       <path d="M16 12l5 5l-4 4l-5 -5" />
                       <path d="M16 17l-1.5 1.5" /></svg
-                  ></a>
-                </li>
-                <li class="list" data-target="about">
-                  <a href="#about"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="icon icon-tabler icons-tabler-outline icon-tabler-user"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                      <path
-                        d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
-                      /></svg
                   ></a>
                 </li>
                 <li class="list" data-target="contacts">
@@ -169,7 +169,26 @@
         <div class="nav-line"></div>
         <div class="nav-pill mobile-magic-nav">
           <ul id="mobileMagicNav">
-            <li class="list active" data-target="projects">
+            <li class="list active" data-target="about">
+              <a href="#about"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-user"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg
+              ></a>
+            </li>
+            <li class="list" data-target="projects">
               <a href="#projects"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -208,25 +227,6 @@
                   <path d="M16 17l-1.5 1.5" /></svg
               ></a>
             </li>
-            <li class="list" data-target="about">
-              <a href="#about"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-user"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg
-              ></a>
-            </li>
             <li class="list" data-target="contacts">
               <a href="#contacts"
                 ><svg
@@ -255,8 +255,23 @@
             <!-- Left Column: Typography -->
             <div class="hero-text-column">
               <h1>Kennedy<br />Saidimu</h1>
-              <div class="hero-subtitle">Full Stack Developer</div>
-              <a href="#projects" class="hero-cta-btn">View Projects</a>
+              <h2 class="hero-subtitle">Software Developer</h2>
+              <h3 class="hero-tagline">
+                <span>AI Systems</span>
+                <span class="bullet">&bull;</span>
+                <span>Integrations</span>
+                <span class="bullet">&bull;</span>
+                <span>Distributed Applications</span>
+              </h3>
+              <p class="hero-description">
+                I build business systems that connect people, data, AI, and
+                operational workflows: from full-stack applications and RAG
+                systems to APIs, messaging platforms, payments, and infrastructure.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#projects" class="hero-cta-btn primary">Explore Work</a>
+                <a href="#contacts" class="hero-cta-btn secondary">Reach Out</a>
+              </div>
             </div>
 
             <!-- Right Column: Intricate Experience Card -->
@@ -306,36 +321,47 @@
           </div>
 
           <div class="grid-content">
-            <h1>Hi, you've found me...</h1>
+            <h1 class="found-me-title">
+              Hi, you've found me...
+              <img
+                src="images/checkered-flags.png"
+                alt="Checkered Flags"
+                class="checkered-flag-icon"
+              />
+            </h1>
 
             <!-- Card 1: Design -->
             <div class="about-card" id="card-design">
               <div class="card-icon-header">
-                <div class="icon-circle red-outline"></div>
+                <div class="icon-circle red-dot"></div>
               </div>
-              <h3>Design to Deployment</h3>
+              <h3>I write software.</h3>
               <p>
-                I build full stack systems end to end — frontend, backend,
-                data, and infrastructure — taking responsibility for the full
-                lifecycle from problem definition to long-term operation.
+                Usually that means starting somewhere on the surface and
+                eventually finding myself underneath it — figuring out the APIs,
+                the data, the integrations, the infrastructure, and all the little
+                things that make the whole system work.
               </p>
+              <p>That's the part I enjoy.</p>
             </div>
 
             <!-- Card 2: Integrations -->
             <div class="about-card" id="card-integrations">
               <div class="card-icon-header">
-                <div class="icon-circle red-dot"></div>
+                <div class="icon-circle orange-dot"></div>
               </div>
-              <h3>Obsessed With Social Media Integrations</h3>
+              <h3>A lot of software doesn't live in one place.</h3>
               <p>
-                I take a business-centered approach to software engineering:
-                understanding how organizations operate, identifying
-                inefficiencies in communication and workflows, and designing
-                systems that automate processes, improve reliability, and
-                support sustainable growth. My work spans SaaS platforms,
-                internal business tools, and web systems, with a strong focus on
-                full stack delivery, backend architecture, integrations, and
-                maintainable APIs.
+                A message starts in WhatsApp.<br />
+                A payment happens in M-Pesa.<br />
+                An API carries the request.<br />
+                An AI agent finds the right information.<br />
+                A CRM records what happened.
+              </p>
+              <p>I like being in the middle of that.</p>
+              <p>
+                Connecting the pieces, deciding how they should communicate, and
+                turning separate systems into something that works as one.
               </p>
               <div class="social-icons-row">
                 <div class="social-bubble wa">
@@ -353,75 +379,33 @@
             <!-- Card 3: System Architecture -->
             <div class="about-card" id="card-architecture">
               <div class="card-icon-header">
-                <div class="icon-circle black-dot"></div>
+                <div class="icon-circle green-dot"></div>
               </div>
-              <h3 class="arch-title">System Thinking & Architecture</h3>
-              <p class="arch-subtitle">
-                I design ecosystems, not just applications. My systems are
-                composed of clearly defined services and data flows that can
-                evolve without breaking core functionality.
+              <h3 class="arch-title">I Love What I Do</h3>
+              <p class="arch-subtitle">And this is how I do what I do.</p>
+              <p class="arch-text">I bite into complex systems in small pieces.</p>
+              <p class="arch-text">
+                Think about what talks to what, where the data goes, what
+                happens when something fails, and how the system changes when ten
+                users become ten thousand.
+              </p>
+              <p class="arch-text" style="margin-bottom: 25px;">
+                I like understanding the individual pieces, putting them
+                together, and seeing the whole thing come alive.
               </p>
 
-              <div class="architecture-diagram-wrapper">
-                <div class="arch-diagram">
-                  <!-- Input Node -->
-                  <div class="arch-node input-node">
-                    <ion-icon name="share-social-outline"></ion-icon>
-                    <span>Social Media Events</span>
-                  </div>
-
-                  <div class="arch-arrow">
-                    <svg width="40" height="20" viewBox="0 0 40 20">
-                      <path
-                        d="M0 10 H35 M30 5 L35 10 L30 15"
-                        fill="none"
-                        stroke="#ccc"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-
-                  <!-- Central Core -->
-                  <div class="arch-node core-node">
-                    <div class="core-header">Integration Core</div>
-                    <div class="core-sub">
-                      <div class="sub-item">Auth Service</div>
-                      <div class="sub-item">Workflow Engine</div>
-                    </div>
-                  </div>
-
-                  <div class="arch-arrow multi">
-                    <svg width="40" height="60" viewBox="0 0 40 60">
-                      <path
-                        d="M0 30 H10 M10 10 V50 M10 10 H35 M30 5 L35 10 L30 15 M10 30 H35 M30 25 L35 30 L30 35 M10 50 H35 M30 45 L35 50 L30 55"
-                        fill="none"
-                        stroke="#ccc"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-
-                  <!-- Output Nodes -->
-                  <div class="arch-outputs">
-                    <div class="arch-node output">CRM</div>
-                    <div class="arch-node output">Data Lake</div>
-                    <div class="arch-node output">Analytics</div>
-                  </div>
+              <!-- F1 5-Lights Animation Gantry -->
+              <div class="f1-gantry-container" id="f1Gantry">
+                <div class="f1-gantry-header">
+                  <span class="f1-status-label" id="f1StatusText">LIGHTS OUT SEQUENCE</span>
                 </div>
-              </div>
-
-              <div class="arch-description">
-                <strong>System Architecture & Design</strong> What I build is
-                clearly defined; services and data flows that evolve without
-                breaking core functionality.
-              </div>
-
-              <div class="arch-footer">
-                <span class="tech-tag">NEXT.js</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Redis</span>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Docker</span>
+                <div class="f1-lights-gantry">
+                  <div class="f1-light-pod" data-light="1"><div class="f1-light-dot"></div></div>
+                  <div class="f1-light-pod" data-light="2"><div class="f1-light-dot"></div></div>
+                  <div class="f1-light-pod" data-light="3"><div class="f1-light-dot"></div></div>
+                  <div class="f1-light-pod" data-light="4"><div class="f1-light-dot"></div></div>
+                  <div class="f1-light-pod" data-light="5"><div class="f1-light-dot"></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -510,11 +494,8 @@
           </div>
         </section>
 
-        <!-- Section Slider Container -->
-        <div class="section-slider" id="sectionSlider">
-          <div class="slider-track" id="sliderTrack">
-            <!-- Slide 1: Projects -->
-            <section class="projects">
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
               <!-- subheading pill -->
               <div class="projects-header-pill">
                 <h1>Selected Projects</h1>
@@ -573,35 +554,105 @@
                 </div>
               </div>
             </section>
-            <!-- key competencies -->
+            <!-- tech stack -->
             <section class="key-competencies" id="skills">
               <div class="competencies-header-pill">
-                <h1>competencies</h1>
+                <h1>Tech Stack</h1>
               </div>
 
               <div class="section-intro-text">
-                <h3>Engineering Perspective</h3>
+                <h3>Tools of the Craft</h3>
                 <p>
-                  I optimize for long-term maintainability, predictable
-                  behavior, and real-world constraints. I value systems that are
-                  simple to reason about, easy to extend, and resilient under
-                  change.
+                  Like any good workman, I know my tools inside out—and when to use
+                  which. Every framework, database, and queue here is a piece I've tested in
+                  the trenches to build solid software that just works.
                 </p>
               </div>
 
               <div class="competencies-visual-container">
+                <!-- Circuit Board Dotted Interconnection Network -->
+                <svg class="connectors-svg" viewBox="0 0 1000 480" preserveAspectRatio="none">
+                  <!-- Circuit Trace 1: Design to Frontend -->
+                  <path d="M 65 155 H 150 L 175 180 V 195 H 265" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Circuit Trace 2: Frontend to Backend (top route) -->
+                  <path d="M 265 160 V 90 L 290 65 H 440 L 465 90 V 140" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Dedicated Drop 1: Branch to Databases Badge (left side) -->
+                  <path d="M 175 180 V 365 L 195 395 H 320" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Connection 1: Backend Frameworks to Databases Badge (right side) -->
+                  <path d="M 410 200 H 385 L 365 220 V 365 L 395 395 H 420" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Circuit Trace 3: Backend to APIs -->
+                  <path d="M 465 140 H 560 L 585 165 V 175 H 665" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Circuit Trace 4: APIs to DevOps (top route) -->
+                  <path d="M 665 170 V 90 L 690 65 H 840 L 865 90 V 145" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Dedicated Drop 2: Branch to Cloud Badge (left side) -->
+                  <path d="M 585 165 V 365 L 605 395 H 730" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Connection 2: APIs & Queues to Cloud Badge (right side) -->
+                  <path d="M 745 210 H 770 L 790 230 V 365 L 820 395 H 850" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Bottom Cross-Interconnect: Databases Badge to Cloud Badge -->
+                  <path d="M 280 395 H 850" fill="none" class="circuit-dotted-line" />
+
+                  <!-- Circuit Via Pads (PCB Solder Nodes) -->
+                  <g class="circuit-via">
+                    <circle cx="175" cy="180" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="175" cy="180" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="290" cy="65" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="290" cy="65" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="440" cy="65" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="440" cy="65" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="410" cy="200" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="410" cy="200" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="585" cy="165" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="585" cy="165" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="690" cy="65" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="690" cy="65" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="745" cy="210" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="745" cy="210" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="840" cy="65" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="840" cy="65" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="195" cy="395" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="195" cy="395" r="2.5" fill="#c02424" />
+                  </g>
+                  <g class="circuit-via">
+                    <circle cx="605" cy="395" r="5" stroke="#c02424" stroke-width="1.5" fill="#fff" />
+                    <circle cx="605" cy="395" r="2.5" fill="#c02424" />
+                  </g>
+                </svg>
+
                 <div class="competencies-grid-new">
                   <!-- Pillar 1: Design -->
                   <div class="comp-capsule pillar-design">
                     <div class="capsule-label">Design</div>
-                    <div class="capsule-detail">UI/UX Prototyping</div>
-                    <div class="capsule-detail italic">Prototyping</div>
+                    <div class="capsule-detail">UI/UX</div>
                     <div class="capsule-icon-main">
                       <img
                         src="images/figma.svg"
                         alt="Figma"
-                        width="40"
-                        height="40"
+                        width="36"
+                        height="36"
                         loading="lazy"
                         decoding="async"
                       />
@@ -609,8 +660,8 @@
                         <img
                           src="images/wix.svg"
                           alt="Wix"
-                          width="40"
-                          height="40"
+                          width="36"
+                          height="36"
                           loading="lazy"
                           decoding="async"
                         />
@@ -618,19 +669,7 @@
                     </div>
                   </div>
 
-                  <!-- Floating Badge: SQL -->
-                  <div class="floating-badge badge-sql">
-                    <div class="tech-icon-small">
-                      <img src="images/mysql.svg" alt="SQL" loading="lazy" />
-                      <img
-                        src="images/sqlite.svg"
-                        alt="SQLite"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-
-                  <!-- Pillar 3: Frontend Systems -->
+                  <!-- Pillar 2: Frontend Systems -->
                   <div class="comp-capsule pillar-frontend">
                     <div class="capsule-label">
                       Frontend <br />
@@ -648,20 +687,42 @@
                     </div>
                   </div>
 
-                  <!-- Pillar 4: Backend Frameworks -->
+                  <!-- Floating Badge: Databases (PostgreSQL, MySQL, MongoDB, SQLite) -->
+                  <div class="floating-badge badge-sql">
+                    <div class="tech-icon-small" style="display: flex; gap: 10px; align-items: center;">
+                      <img src="images/postgresql.svg" alt="PostgreSQL" style="height: 24px; width: auto;" loading="lazy" />
+                      <img src="images/mysql.svg" alt="MySQL" style="height: 24px; width: auto;" loading="lazy" />
+                      <img src="images/mongodb.svg" alt="MongoDB" style="height: 24px; width: auto;" loading="lazy" />
+                      <img src="images/sqlite.svg" alt="SQLite" style="height: 24px; width: auto;" loading="lazy" />
+                    </div>
+                  </div>
+
+                  <!-- Pillar 3: Backend Frameworks -->
                   <div class="comp-capsule pillar-backend-frameworks">
                     <div class="capsule-label">
                       Backend <br />
                       Frameworks
                     </div>
                     <div class="tech-circle">
-                      <img src="images/php.svg" alt="PHP" loading="lazy" />
+                      <img
+                        src="images/nestjs.svg"
+                        alt="NestJS"
+                        width="36"
+                        height="36"
+                        loading="lazy"
+                      />
                     </div>
-                    <div class="sub-icons-row">
                       <div class="tech-box">
                         <img
-                          src="images/flask.svg"
-                          alt="Flask"
+                          src="images/laravel.svg"
+                          alt="Laravel"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="tech-box">
+                        <img
+                          src="images/nodedotjs.svg"
+                          alt="Node"
                           loading="lazy"
                         />
                       </div>
@@ -671,17 +732,15 @@
                           alt="Django"
                           loading="lazy"
                         />
-                      </div>
                     </div>
                   </div>
 
-                  <!-- Pillar 5: Backend & APIs -->
+                  <!-- Pillar 4: APIs & Queues -->
                   <div class="comp-capsule pillar-backend-apis">
                     <div class="capsule-label small">
-                      Backend & <br />
-                      APIS
+                      APIs & <br />
+                      Queues
                     </div>
-
                     <div class="stack-icons">
                       <img src="images/go.svg" alt="Go" loading="lazy" />
                       <img
@@ -689,21 +748,15 @@
                         alt="FastAPI"
                         loading="lazy"
                       />
-                      <img
-                        src="images/nodedotjs.svg"
-                        alt="Node"
-                        class="mini-icon"
-                        loading="lazy"
-                      />
-                      <img
+                                         <img
                         src="images/python.svg"
                         alt="Python"
                         class="mini-icon"
                         loading="lazy"
                       />
                       <img
-                        src="images/docker.svg"
-                        alt="Docker"
+                        src="images/redis.svg"
+                        alt="Redis"
                         class="mini-icon"
                         loading="lazy"
                       />
@@ -712,134 +765,59 @@
 
                   <!-- Floating Badge: Cloud -->
                   <div class="floating-badge badge-cloud">
-                    <img src="images/aws.svg" alt="AWS" loading="lazy" />
-                    <span class="label">AWS Cloud</span>
-                    <img
-                      src="images/googlecloud.svg"
-                      alt="GCP"
-                      loading="lazy"
-                    />
-                    <span class="label">Google Cloud</span>
+                    <img src="images/aws.svg" alt="AWS" style="height: 18px; width: auto;" loading="lazy" />
+                    <span class="label" style="font-size: 11px; font-weight: 600; color: #666;">AWS Cloud</span>
+                    <img src="images/googlecloud.svg" alt="GCP" style="height: 18px; width: auto;" loading="lazy" />
+                    <span class="label" style="font-size: 11px; font-weight: 600; color: #666;">Google Cloud</span>
                   </div>
-                </div>
+
+                  <!-- Pillar 5: Servers & DevOps -->
+                  <div class="comp-capsule pillar-devops">
+                    <div class="capsule-label small">
+                      Servers & <br />
+                      DevOps
+                    </div>
+                    <div class="stack-icons">
+                      <img
+                        src="images/docker.svg"
+                        alt="Docker"
+                        loading="lazy"
+                      />
+                      <img
+                        src="images/nginx.svg"
+                        alt="Nginx"
+                        class="mini-icon"
+                        loading="lazy"
+                      />
+                      <img
+                        src="images/caddy.svg"
+                        alt="Caddy"
+                        class="mini-icon"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
               </div>
             </section>
-            <!-- End Slide 2: Key Competencies -->
-          </div>
-          <!-- End .slider-track -->
-
-          <!-- Floating Chevron Button -->
-          <button
-            class="slide-toggle-btn"
-            id="slideToggleBtn"
-            aria-label="Toggle section"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-        <!-- End .section-slider -->
+            <!-- End Tech Stack -->
 
         <!-- Contact Section -->
-        <div class="contact-card">
-          <div class="card-icon-header">
-            <div
-              class="icon-circle red-outline"
-              id="contact-circle-bounce"
-            ></div>
-          </div>
-          <h3>Find me in my socials</h3>
-          <p>
-            I'm always open to new opportunities and challenges. If you have any
-            questions or would like to work together, please don't hesitate to
-            contact me.
-          </p>
-        </div>
-
-        <!-- Centered Red Logo -->
-        <div class="contact-logo-container">
-          <div class="contact-logo-wrapper">
-            <img
-              src="images/saidimu-logo.png"
-              alt="Saidimu Logo"
-              class="contact-red-logo"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <!-- Orbiting Social Icons -->
-            <div class="social-orbit">
-              <!-- Icon 1: WhatsApp -->
-              <div class="orbit-item" style="--i: 0; --total: 4">
-                <div class="icon-circle">
-                  <ion-icon name="logo-whatsapp"></ion-icon>
-                </div>
-              </div>
-              <!-- Icon 2: LinkedIn -->
-              <div class="orbit-item" style="--i: 1; --total: 4">
-                <div class="icon-circle">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-              </div>
-              <!-- Icon 3: Instagram -->
-              <div class="orbit-item" style="--i: 2; --total: 4">
-                <div class="icon-circle">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-              </div>
-              <!-- Icon 4: GitHub -->
-              <div class="orbit-item" style="--i: 3; --total: 4">
-                <div class="icon-circle">
-                  <ion-icon name="logo-github"></ion-icon>
-                </div>
-              </div>
+        <section id="contacts" class="socials-grid-section">
+          <div class="contacts-header-wrapper">
+            <div class="contacts-header-pill">
+              <h1>Get in Touch</h1>
             </div>
           </div>
-        </div>
-
-        <!-- contact section -->
-        <section id="contacts" class="contact-area">
-          <div class="contact-container">
-            <div class="contact-header-block">
-              <h1 class="contact-big-title">Get In<br />Touch</h1>
-              <div class="red-circle"></div>
-            </div>
-
-            <div class="contact-main-grid">
+          <div class="socials-3col-grid">
+            <!-- Column 1 (Span 1): Contact Form & Info Stack (Left) -->
+            <div class="contact-form-container">
               <div class="contact-info-stack">
-                <a href="mailto:saidimu@jiaminie.com" class="action-bar">
-                  <div class="badge-icon">
-                    <img
-                      src="images/zoho.svg"
-                      alt="Email Icon"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="badge-text">
-                    <span class="label">Email</span>
-                    <span class="value">saidimu@jiaminie.com</span>
-                  </div>
-                </a>
                 <a href="tel:+254704696287" class="action-bar">
                   <div class="badge-icon">
-                    <img
-                      src="images/whatsapp.svg"
-                      alt="Phone Icon"
-                      loading="lazy"
-                    />
+                    <ion-icon name="logo-whatsapp"></ion-icon>
                   </div>
                   <div class="badge-text">
-                    <span class="label">Phone</span>
+                    <span class="label">Phone / WhatsApp</span>
                     <span class="value">+254 704 696 287</span>
                   </div>
                 </a>
@@ -888,6 +866,29 @@
                   </button>
                 </form>
               </div>
+            </div>
+
+            <!-- Column 2 (Span 1): Portrait Image & Typography (Right) -->
+            <div class="contact-card">
+              <div class="contact-profile-card">
+                <img
+                  src="images/ken.avif"
+                  alt="Kennedy Saidimu"
+                  class="contact-profile-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="card-icon-header">
+                <div
+                  class="icon-circle red-outline"
+                  id="contact-circle-bounce"
+                ></div>
+              </div>
+              <h3>Let's Build Something Great</h3>
+              <p>
+                Have a system to scale, an integration to solve, or an idea to ship? Drop a line.
+              </p>
             </div>
           </div>
         </section>
@@ -955,7 +956,7 @@
             "A reporting engine that assembles disclosure-ready outputs from live evidence",
             "End-to-end ownership: ingestion, retrieval, reasoning, and export",
           ],
-          image: "/images/esg.png",
+          image: "/images/esg.avif",
         },
         {
           id: 2,
@@ -969,13 +970,13 @@
             "One identity and one session spanning multiple government services",
             "Mobile-first flows engineered for shaky networks and low-end devices",
           ],
-          image: "/images/tax-webviews.png",
+          image: "/images/tax-webviews.avif",
         },
         {
           id: 3,
-          title: "stagecraft",
+          title: "Lego for Web",
           problem: [
-            "Shipping a page meant shipping a developer. Mobile webviews needed production-ready screens at speed, and hand-coded markup could not keep up.",
+            "Creating a website meant deploying a developer. Mobile-first development required production-ready screens at speed, but hand-coded markup could not keep up.",
           ],
           solution: [
             "A visual, no-code builder that composes responsive, production-ready pages as JSON documents",
@@ -983,7 +984,22 @@
             "AI page generation that delivers a first draft in seconds",
             "Purpose-built for mobile-first webviews on platforms like WhatsApp",
           ],
-          image: "/images/stagecraft.png",
+          image: "/images/stagecraft.avif",
+        },
+        {
+          id: 4,
+          title: "executive cockpit",
+          problem: [
+            "Founders and operating teams lose critical institutional memory, decision history, and business metrics across scattered chats, docs, and siloed tools.",
+            "Operating data lived in managers' heads and disparate portals without a single source of truth.",
+          ],
+          solution: [
+            "Institutional memory & founder operating system built with Next.js 15, PostgreSQL, Prisma, and TypeScript",
+            "Unified executive dashboard spanning 13 operational modules including revenue, decisions, risks, knowledge, and compliance",
+            "DeepSeek RAG AI service integration providing natural language reasoning and contextual search over company intelligence",
+            "Role-based access control (RBAC), JWT authentication, and audit logging for enterprise security",
+          ],
+          image: "/images/jip.avif",
         },
       ];
 
@@ -1250,21 +1266,26 @@
         updateContent(activeProjectIndex);
         updateClipPath(circleCenterX);
 
-        // Section Slider Toggle
+        // Section Slider Navigation Buttons
         const sliderTrack = document.getElementById("sliderTrack");
-        const toggleBtn = document.getElementById("slideToggleBtn");
+        const slideLeftBtn = document.getElementById("slideLeftBtn");
+        const slideRightBtn = document.getElementById("slideRightBtn");
+        const slideToggleBtn = document.getElementById("slideToggleBtn");
 
-        if (toggleBtn && sliderTrack) {
-          toggleBtn.addEventListener("click", () => {
-            setSliderSlide(!isSliderSlid());
-          });
+        if (slideLeftBtn) {
+          slideLeftBtn.addEventListener("click", () => setSliderSlide(false));
+        }
+        if (slideRightBtn) {
+          slideRightBtn.addEventListener("click", () => setSliderSlide(true));
+        }
+        if (slideToggleBtn) {
+          slideToggleBtn.addEventListener("click", () => setSliderSlide(!isSliderSlid()));
         }
 
         function setSliderSlide(slid) {
-          if (!sliderTrack || !toggleBtn) return;
+          if (!sliderTrack) return;
           sliderTrack.classList.toggle("slid", slid);
-          toggleBtn.classList.toggle("rotated", slid);
-          moveMagicIndicator(slid ? 1 : 0);
+          moveMagicIndicator(slid ? 2 : 1);
         }
 
         function isSliderSlid() {
@@ -1306,28 +1327,16 @@
             );
         }
 
-        // Shared navigation: keeps slider, indicator, labels and scroll in sync
-        const NAV_TARGETS = ["projects", "skills", "about", "contacts"];
+        // Shared navigation: keeps indicator, labels and scroll in sync
+        const NAV_TARGETS = ["about", "projects", "skills", "contacts"];
 
         function navigateToIndex(index) {
           const targetId = NAV_TARGETS[index];
           if (!targetId) return;
 
-          // Keep the slider and the nav in sync
-          if (targetId === "skills") {
-            setSliderSlide(true);
-          } else if (targetId === "projects") {
-            setSliderSlide(false);
-          } else {
-            moveMagicIndicator(index);
-          }
+          moveMagicIndicator(index);
 
-          // Scroll to the slider itself (never the hidden slide) to avoid
-          // scrollIntoView scrolling the overflow-hidden track.
-          const targetSection =
-            targetId === "skills"
-              ? document.querySelector(".section-slider")
-              : document.getElementById(targetId);
+          const targetSection = document.getElementById(targetId);
           if (targetSection) {
             targetSection.scrollIntoView({ behavior: "smooth" });
           }
@@ -1358,45 +1367,23 @@
         if (mobileMagicNav)
           mobileMagicNav.addEventListener("click", handleNavClick);
 
-        // Intersection Observer - Throttled
+        // Intersection Observer
         const observerOptions = {
           root: null,
-          rootMargin: "-50% 0px -50% 0px",
+          rootMargin: "-40% 0px -40% 0px",
           threshold: 0,
         };
 
-        // The slider holds two logical sections: projects (slide 1) and
-        // skills (slide 2). Its index is derived from the slider state
-        // instead of observing the hidden #skills slide.
         const observedSections = [
-          { el: document.getElementById("projects"), index: 0 },
-          { el: document.getElementById("about"), index: 2 },
+          { el: document.getElementById("about"), index: 0 },
+          { el: document.getElementById("projects"), index: 1 },
+          { el: document.getElementById("skills"), index: 2 },
           { el: document.getElementById("contacts"), index: 3 },
         ];
-        const skillsEl = document.getElementById("skills");
-
-        // Below this width the slider stacks vertically and the toggle is
-        // hidden, so both slides are reachable by normal scrolling.
-        function isStackedLayout() {
-          return window.matchMedia("(max-width: 1095px)").matches;
-        }
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
-
-            if (entry.target === skillsEl) {
-              // On desktop the skills slide is hidden until slid across.
-              if (isStackedLayout() || isSliderSlid()) moveMagicIndicator(1);
-              return;
-            }
-
-            if (entry.target === sliderTrack) {
-              if (isStackedLayout()) return;
-              moveMagicIndicator(isSliderSlid() ? 1 : 0);
-              return;
-            }
-
             const match = observedSections.find(
               (section) => section.el === entry.target,
             );
@@ -1407,8 +1394,6 @@
         observedSections.forEach(({ el }) => {
           if (el) observer.observe(el);
         });
-        if (sliderTrack) observer.observe(sliderTrack);
-        if (skillsEl) observer.observe(skillsEl);
 
         // Typewriter Class - Optimized
         class Typewriter {
@@ -1604,6 +1589,79 @@
           const ro = new ResizeObserver(() => draw());
           ro.observe(red);
           ro.observe(circle);
+        }
+      })();
+
+      // F1 5-Lights Animation Logic (Auto Scroll Trigger)
+      (function initF1Lights() {
+        const gantryContainer = document.getElementById('f1Gantry');
+        const statusText = document.getElementById('f1StatusText');
+        const lightPods = document.querySelectorAll('.f1-light-pod');
+
+        if (!gantryContainer || !lightPods.length) return;
+
+        let isRunning = false;
+        let hasTriggered = false;
+        let timeouts = [];
+
+        function resetLights() {
+          timeouts.forEach(t => clearTimeout(t));
+          timeouts = [];
+          lightPods.forEach(pod => pod.classList.remove('active'));
+          statusText.classList.remove('lights-out');
+          statusText.textContent = 'LIGHTS OUT SEQUENCE';
+          if (gantryContainer) gantryContainer.classList.remove('accelerate');
+        }
+
+        function runSequence() {
+          if (isRunning) return;
+          isRunning = true;
+          resetLights();
+
+          const interval = 800; // 0.8 seconds between each light
+          lightPods.forEach((pod, index) => {
+            const t = setTimeout(() => {
+              pod.classList.add('active');
+              statusText.textContent = `${index + 1} LIGHT${index > 0 ? 'S' : ''}...`;
+            }, (index + 1) * interval);
+            timeouts.push(t);
+          });
+
+          // Random holding delay after 5th light (between 0.8s and 1.4s)
+          const holdDelay = 1000 + Math.floor(Math.random() * 600);
+          const totalLightTime = 5 * interval + holdDelay;
+
+          // LIGHTS OUT!
+          const lightsOutTimeout = setTimeout(() => {
+            lightPods.forEach(pod => pod.classList.remove('active'));
+            statusText.textContent = 'LIGHTS OUT AND AWAY WE GO!';
+            statusText.classList.add('lights-out');
+            if (gantryContainer) gantryContainer.classList.add('accelerate');
+
+            setTimeout(() => {
+              const projectsSection = document.getElementById('projects');
+              if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+              }
+              isRunning = false;
+            }, 500);
+
+          }, totalLightTime);
+
+          timeouts.push(lightsOutTimeout);
+        }
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !hasTriggered) {
+                hasTriggered = true;
+                runSequence();
+              }
+            });
+          }, { threshold: 0.5 });
+
+          observer.observe(gantryContainer);
         }
       })();
     </script>
