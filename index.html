@@ -270,7 +270,7 @@
               </p>
               <div class="hero-cta-group">
                 <a href="#projects" class="hero-cta-btn primary">Explore Work</a>
-                <a href="#contacts" class="hero-cta-btn secondary">Reach Out</a>
+                <a href="#contact-form-card" class="hero-cta-btn secondary">Reach Out</a>
               </div>
             </div>
 
@@ -823,7 +823,7 @@
                 </a>
               </div>
 
-              <div class="contact-form-card">
+              <div class="contact-form-card" id="contact-form-card">
                 <h3>Send a Message</h3>
                 <form action="#" method="POST">
                   <div class="form-group">
@@ -1366,6 +1366,47 @@
         if (magicNav) magicNav.addEventListener("click", handleNavClick);
         if (mobileMagicNav)
           mobileMagicNav.addEventListener("click", handleNavClick);
+
+        // Reach Out CTA & Contact Form Highlight Handler
+        function highlightAndFocusContactForm() {
+          const formCard = document.getElementById("contact-form-card");
+          if (!formCard) return;
+
+          // Sync navigation indicator to contacts section
+          moveMagicIndicator(3);
+
+          // Scroll directly to message card
+          formCard.scrollIntoView({ behavior: "smooth", block: "center" });
+
+          // Add glowing white highlight border animation
+          formCard.classList.remove("highlight-card");
+          void formCard.offsetWidth; // Force reflow
+          formCard.classList.add("highlight-card");
+
+          // Focus first input field in form card after smooth scroll
+          setTimeout(() => {
+            const firstInput = formCard.querySelector("input, textarea");
+            if (firstInput) {
+              firstInput.focus({ preventScroll: true });
+            }
+          }, 450);
+
+          // Remove highlight class after animation finishes
+          setTimeout(() => {
+            formCard.classList.remove("highlight-card");
+          }, 4500);
+        }
+
+        document.querySelectorAll('a[href="#contact-form-card"]').forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            highlightAndFocusContactForm();
+          });
+        });
+
+        if (window.location.hash === "#contact-form-card") {
+          setTimeout(highlightAndFocusContactForm, 300);
+        }
 
         // Intersection Observer
         const observerOptions = {

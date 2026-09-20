@@ -2425,6 +2425,29 @@ section p {
   border-radius: 32px;
   color: #333;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* White Border Glow Highlight for Contact Message Card */
+.socials-3col-grid .contact-form-card.highlight-card,
+.contact-form-card:target {
+  outline: 4px solid #ffffff !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.95), 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+  animation: cardWhitePulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes cardWhitePulse {
+  0% {
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    outline-color: #ffffff;
+    outline-offset: 6px;
+    box-shadow: 0 0 45px rgba(255, 255, 255, 1), 0 25px 60px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .socials-3col-grid .contact-form-card h3 {
@@ -2572,7 +2595,7 @@ section p {
 
 @media (max-width: 992px) {
   .socials-grid-section {
-    padding: 40px 1.5rem;
+    padding: 40px 1rem;
     border-radius: 0 !important;
   }
 
@@ -2580,6 +2603,7 @@ section p {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
   }
 
   .socials-3col-grid .contact-card {
@@ -2594,6 +2618,24 @@ section p {
   .socials-3col-grid .contact-form-container {
     order: 0;
     width: 100%;
+    max-width: 100%;
+  }
+
+  .socials-3col-grid .contact-info-stack {
+    width: 100%;
+  }
+
+  .socials-3col-grid .action-bar {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  .socials-3col-grid .contact-form-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 18px;
   }
 
   .socials-3col-grid .contact-dock-container {
@@ -2708,6 +2750,8 @@ section p {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+.orbit-item {
   /* Place at radius = 300px (half of 600px) */
   transform: rotate(calc(360deg / var(--total) * var(--i))) translateX(300px);
 }
@@ -3402,7 +3446,8 @@ section p {
     width: 100% !important;
     height: auto !important;
     clip-path: none !important; /* Override inline style */
-    border-radius: 0 !important;
+    border-radius: 36px !important;
+    overflow: hidden;
     padding: 40px 20px;
     background-color: #c02424;
     display: flex;
@@ -3753,10 +3798,12 @@ section p {
   }
 
   /* Badges */
+  .socials-3col-grid .action-bar,
   .action-bar {
     padding: 15px 20px;
     gap: 15px;
     width: 100%; /* Full width on mobile */
+    min-width: 100%;
     box-sizing: border-box;
   }
 
@@ -3771,7 +3818,10 @@ section p {
     word-break: break-all; /* Prevent email overflow */
   }
 
+  .socials-3col-grid .contact-form-card,
   .contact-form-card {
-    padding: 30px 20px;
+    padding: 24px 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
