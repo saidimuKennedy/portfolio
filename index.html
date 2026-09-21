@@ -39,9 +39,10 @@
           <div class="sidebar-nav-wrapper">
             <div class="nav-labels">
               <span class="nav-label active" data-index="0">About Me</span>
-              <span class="nav-label" data-index="1">Projects</span>
-              <span class="nav-label" data-index="2">Skills</span>
-              <span class="nav-label" data-index="3">Contacts</span>
+              <span class="nav-label" data-index="1">Experience</span>
+              <span class="nav-label" data-index="2">Projects</span>
+              <span class="nav-label" data-index="3">Skills</span>
+              <span class="nav-label" data-index="4">Contacts</span>
             </div>
             <div class="navigation-sidebar">
               <ul id="magicNav">
@@ -63,6 +64,33 @@
                       <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                       <path
                         d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="list" data-target="experience">
+                  <a href="#experience"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-building"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 21l18 0" />
+                      <path d="M9 8l1 0" />
+                      <path d="M9 12l1 0" />
+                      <path d="M9 16l1 0" />
+                      <path d="M14 8l1 0" />
+                      <path d="M14 12l1 0" />
+                      <path d="M14 16l1 0" />
+                      <path
+                        d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16"
                       /></svg
                   ></a>
                 </li>
@@ -191,6 +219,33 @@
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                   <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg
+              ></a>
+            </li>
+            <li class="list" data-target="experience">
+              <a href="#experience"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-building"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l18 0" />
+                  <path d="M9 8l1 0" />
+                  <path d="M9 12l1 0" />
+                  <path d="M9 16l1 0" />
+                  <path d="M14 8l1 0" />
+                  <path d="M14 12l1 0" />
+                  <path d="M14 16l1 0" />
+                  <path
+                    d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16"
+                  /></svg
               ></a>
             </li>
             <li class="list" data-target="projects">
@@ -1373,7 +1428,7 @@
         function setSliderSlide(slid) {
           if (!sliderTrack) return;
           sliderTrack.classList.toggle("slid", slid);
-          moveMagicIndicator(slid ? 2 : 1);
+          moveMagicIndicator(slid ? 3 : 2);
         }
 
         function isSliderSlid() {
@@ -1416,7 +1471,13 @@
         }
 
         // Shared navigation: keeps indicator, labels and scroll in sync
-        const NAV_TARGETS = ["about", "projects", "skills", "contacts"];
+        const NAV_TARGETS = [
+          "about",
+          "experience",
+          "projects",
+          "skills",
+          "contacts",
+        ];
 
         function navigateToIndex(index) {
           const targetId = NAV_TARGETS[index];
@@ -1461,7 +1522,7 @@
           if (!formCard) return;
 
           // Sync navigation indicator to contacts section
-          moveMagicIndicator(3);
+          moveMagicIndicator(4);
 
           // Scroll directly to message card
           formCard.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1505,9 +1566,10 @@
 
         const observedSections = [
           { el: document.getElementById("about"), index: 0 },
-          { el: document.getElementById("projects"), index: 1 },
-          { el: document.getElementById("skills"), index: 2 },
-          { el: document.getElementById("contacts"), index: 3 },
+          { el: document.getElementById("experience"), index: 1 },
+          { el: document.getElementById("projects"), index: 2 },
+          { el: document.getElementById("skills"), index: 3 },
+          { el: document.getElementById("contacts"), index: 4 },
         ];
 
         const observer = new IntersectionObserver((entries) => {
